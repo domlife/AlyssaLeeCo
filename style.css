@@ -660,6 +660,9 @@ a,
 .menu-nav > li.current-menu-item > a {
 	background: none;
 	color: var(--menu-hover-color);
+	text-shadow: 0px 4px 3px rgba(0,0,0,0.8),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
 }
 
 .menu-nav > li:hover > a:before,
@@ -1088,6 +1091,16 @@ a.social-skype:hover {
 	color: #ffffff;
 }
 
+.logo-white h1 {
+	color: #fff;
+	font-weight: 700;
+    font-family: var(--headings-font);
+    line-height: 1.2;
+	text-shadow: 0px 4px 3px rgba(0,0,0,0.6),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+}
+
 .logo-dark{
 	display: none;
 }
@@ -1220,6 +1233,7 @@ transition: all .3s cubic-bezier(.25,1,.35,1) 0s;
 .nav-fixed-top .menu-nav > li.current-menu-item > a {
 	background: none;
 	color: #151515;
+	text-shadow: none;
 }
 
 .no-top-image .menu-nav > li:hover > a:before,
@@ -1228,6 +1242,7 @@ transition: all .3s cubic-bezier(.25,1,.35,1) 0s;
 .nav-fixed-top .menu-nav li.current-menu-item > a:before {
 
     border-color: #151515;
+	text-shadow: none;
 
 }
 
@@ -1301,6 +1316,9 @@ transition: all .3s cubic-bezier(.25,1,.35,1) 0s;
 	font-size: 16px;
 	text-align: center;
 	margin: 0 auto;
+	text-shadow: 0px 4px 3px rgba(0,0,0,0.6),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
 }
 
 .slider-text h1 {
@@ -1312,6 +1330,7 @@ transition: all .3s cubic-bezier(.25,1,.35,1) 0s;
 
 .slider-text .view-more {
 	margin-top: 32px;
+	text-shadow: none;
 }
 
 /* SLIDER v2 */
@@ -3650,9 +3669,26 @@ text-transform: uppercase;
 	width: 100%;
 	padding: 18px 24px;
 	border: 1px solid #151515;
-	background: none;
 	border-radius: 5px;
 	color: #151515;
+}
+
+.comm-field-dark,
+.contact-field-dark,
+#msg-contact-dark,
+.wpcf7-text-dark,
+.wpcf7-textarea-dark {
+	width: 100%;
+	padding: 18px 24px;
+	margin-bottom:15px;
+	border: 1px solid var(--footer-title-color);
+	border-radius: 5px;
+	color: black;
+	background-color: #f9f9f9;
+}
+
+#msg-contact-dark {
+	margin-bottom: 5px;
 }
 
 #msg-contact{
@@ -3695,6 +3731,25 @@ text-transform: uppercase;
 .post-password-form input[type="submit"]:hover{
 	background: var(--primary-color);
 	color: #fff;
+}
+
+#submit-dark{
+	font-size: 14px;
+	font-weight: 600;
+	color: Black;
+	background: var(--footer-title-color);
+	letter-spacing: 0.03em;
+	padding: 12px 24px;
+	border-radius: 99em;
+	display: inline-block;
+	border: none;
+	text-align: center;
+}
+
+#submit-dark:hover{
+	background: var(--primary-color);
+	color: #fff;
+	cursor: pointer;
 }
 
 .white-btn{
@@ -4124,7 +4179,8 @@ color: #151515;
 
 :placeholder-shown,
 ::placeholder{
-	color: #151515;
+	color: #6e6e6e;
+	font-style: italic;
 }
 
 .price-box{
@@ -5022,4 +5078,9 @@ body.hidden-scroll {
 		margin-left: 0;
 		margin-top: 8px;
 	}
+}
+
+.g-recaptcha {
+    transform:scale(1.16);
+    transform-origin:0 0;
 }
