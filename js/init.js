@@ -1,30 +1,49 @@
-var walk = function(dir, done) {
-	var results = [];
-	fs.readdir(dir, function(err, list) {
-	  if (err) return done(err);
-	  var i = 0;
-	  (function next() {
-		var file = list[i++];
-		if (!file) return done(null, results);
-		file = path.resolve(dir, file);
-		fs.stat(file, function(err, stat) {
-		  if (stat && stat.isDirectory()) {
-			walk(file, function(err, res) {
-			  results = results.concat(res);
-			  next();
-			});
-		  } else {
-			results.push(file);
-			next();
-		  }
-		});
-	  })();
-	});
-  };
 (function($) {
     "use strict";
-	walk('/images/galleries');
-
+	var elem = $('.loadGalleries');
+	if (elem.length) {
+		console.log(elem);
+		$.get('images.txt', function(data) {
+			var files = data.split('\n');
+			console.log(data);
+		}, 'text');
+		// const xhttp = new XMLHttpRequest();
+	
+		// xhttp.onreadystatechange = function() {
+		//     if (this.readyState == 4 && this.status == 200) {
+		//         const fileList = this.responseText.split('\n');
+		//         let currentFolder = '';
+	
+		//         const filePaths = fileList
+		//             .map(f => {
+		//                 let filePath = '';
+	
+		//                 if (f) {
+		//                     if (f[0] === '.') {
+		//                         currentFolder = f.replace('.', '').replace(':', '/');
+		//                     }
+		//                     else if (f[f.length - 1] !== '/') {
+		//                         filePath = `${location.href}${currentFolder}${f}`;
+		//                     }
+		//                 }
+			  
+		//                 return filePath;
+		//             })
+		//             .filter(f => f);
+		  
+		//         const imagesContainer = document.getElementById('images');
+		  
+		//         filePaths.map(f => { // Create and put images to the DOM
+		//             const img = document.createElement('IMG');
+		//             img.src = f;
+		//             imagesContainer.appendChild(img);
+		//         });
+		//     }
+		// };
+	
+		// xhttp.open("GET", "images.txt", true);
+		// xhttp.send();
+	}
 
     // home slider
     $('.home-slider').owlCarousel({

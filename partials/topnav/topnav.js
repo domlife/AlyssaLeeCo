@@ -1,6 +1,4 @@
 jQuery("a[href='" + location.pathname.replace('/', '') + "']").each(function(){
-    console.log('hit');
-    console.log(jQuery(this));
     jQuery(this).closest('li').addClass("current-menu-item");
 });
 //mobile menu
