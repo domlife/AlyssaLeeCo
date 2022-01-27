@@ -12,9 +12,10 @@
 			for (let i = 0; i < lines.length; i++) {
 				let f = lines[i];
 				if (f && f.length > 0 && f[0] === '.' && f.split('/').length == 5) {
-					folderPath = f.replace('.', '').replace(':', '/').split('/');
-					currentType = folderPath[folderPath.length-3];
-					currentGallery = folderPath[folderPath.length-2];
+					folderPath = f.replace('.', '').replace(':', '/');
+					let split = f.replace('.', '').replace(':', '/').split('/');
+					currentType = split[split.length-3];
+					currentGallery = split[split.length-2];
 					$(clone).find('.img-fluid').attr('src', folderPath + lines[i+1]);
 					$(clone).find('.port-categ-masonry a').html(currentType);
 					$(clone).find('.port-caption-masonry a').html(currentGallery);
