@@ -1,49 +1,39 @@
 (function($) {
     "use strict";
-	var elem = $('.loadGalleries');
-	if (elem.length) {
-		console.log(elem);
+	$('.loadGalleries').each(function() {
+		let parent = $(this);
+		let elem = parent.html();
+		$(parent).html('');
 		$.get('images.txt', function(data) {
-			var files = data.split('\n');
-			console.log(data);
+			let clone = $(elem).clone();
+			let lines = data.split('\r\n');
+			let files = [];
+			let currentType = '', currentGallery = '', folderPath = '';
+			for (let i = 0; i < lines.length; i++) {
+				let f = lines[i];
+				if (f && f.length > 0 && f[0] === '.' && f.split('/').length == 5) {
+					folderPath = f.replace('.', '').replace(':', '/').split('/');
+					currentType = folderPath[folderPath.length-3];
+					currentGallery = folderPath[folderPath.length-2];
+					$(clone).find('.img-fluid').attr('src', folderPath + lines[i+1]);
+					$(clone).find('.port-categ-masonry a').html(currentType);
+					$(clone).find('.port-caption-masonry a').html(currentGallery);
+					parent.append($(clone).clone());
+					// i++;
+					// while (i < lines.length) {
+					// 	if (lines[i] == '') {
+					// 		break;
+					// 	}
+					// 	$(clone).find('.img-fluid').attr('src', folderPath + lines[i]);
+					// 	$(clone).find('.port-categ-masonry a').html(currentType);
+					// 	$(clone).find('.port-caption-masonry a').html(currentGallery);
+					// 	parent.append($(clone).clone());
+					// 	i++;
+					// }
+				}
+			}
 		}, 'text');
-		// const xhttp = new XMLHttpRequest();
-	
-		// xhttp.onreadystatechange = function() {
-		//     if (this.readyState == 4 && this.status == 200) {
-		//         const fileList = this.responseText.split('\n');
-		//         let currentFolder = '';
-	
-		//         const filePaths = fileList
-		//             .map(f => {
-		//                 let filePath = '';
-	
-		//                 if (f) {
-		//                     if (f[0] === '.') {
-		//                         currentFolder = f.replace('.', '').replace(':', '/');
-		//                     }
-		//                     else if (f[f.length - 1] !== '/') {
-		//                         filePath = `${location.href}${currentFolder}${f}`;
-		//                     }
-		//                 }
-			  
-		//                 return filePath;
-		//             })
-		//             .filter(f => f);
-		  
-		//         const imagesContainer = document.getElementById('images');
-		  
-		//         filePaths.map(f => { // Create and put images to the DOM
-		//             const img = document.createElement('IMG');
-		//             img.src = f;
-		//             imagesContainer.appendChild(img);
-		//         });
-		//     }
-		// };
-	
-		// xhttp.open("GET", "images.txt", true);
-		// xhttp.send();
-	}
+	});
 
     // home slider
     $('.home-slider').owlCarousel({
