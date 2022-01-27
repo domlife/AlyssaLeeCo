@@ -24,7 +24,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2 # Checkout repo
       - shell: bash
-        run: ls -Rpm1 ./galleries/ > images.txt # Saving file list into a file
+        run: ls -Rpm1 ./images/galleries/ > images.txt # Saving file list into a file
       - name: Update Galleries
         uses: actions-go/push@v1 # pushing the changes to the repo
         with:
