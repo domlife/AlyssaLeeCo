@@ -2,6 +2,7 @@
 Elopements/
 Families/
 New Born/
+Weddings/
 
 ./images/galleries/Elopements:
 test/
@@ -9,8 +10,10 @@ test 2/
 
 ./images/galleries/Elopements/test:
 test.png
+test2.png
 
 ./images/galleries/Elopements/test 2:
+test.png
 test2.png
 
 ./images/galleries/Families:
@@ -32,3 +35,11 @@ test.png
 
 ./images/galleries/New Born/test 2:
 test2.png
+
+./images/galleries/Weddings:
+Holden & Ashly/
+
+./images/galleries/Weddings/Holden & Ashly:
+3L3A2389_websize.jpg
+3L3A2390_websize.jpg
+3L3A2391-2_websize.jpg
