@@ -1,40 +1,5 @@
 ./images/galleries/:
-Elopements/
-Families/
-New Born/
 Weddings/
-
-./images/galleries/Elopements:
-test/
-test 2/
-
-./images/galleries/Elopements/test:
-test.png
-test2.png
-
-./images/galleries/Elopements/test 2:
-test.png
-test2.png
-
-./images/galleries/Families:
-test/
-test 2/
-
-./images/galleries/Families/test:
-test.png
-
-./images/galleries/Families/test 2:
-test2.png
-
-./images/galleries/New Born:
-test/
-test 2/
-
-./images/galleries/New Born/test:
-test.png
-
-./images/galleries/New Born/test 2:
-test2.png
 
 ./images/galleries/Weddings:
 Holden & Ashly/
