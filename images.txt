@@ -1,0 +1,9 @@
+./images/galleries/:
+test/
+test 2/
+
+./images/galleries/test:
+test.png
+
+./images/galleries/test 2:
+test2.png
