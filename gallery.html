@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Alyssa Lee</title>
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
+		<!-- Bootstrap CSS -->
+		<link rel='stylesheet' id='bootstrap-css'  href='css/bootstrap/css/bootstrap.css' type='text/css' media='all' />
+		<!-- Font Awesome Icons CSS -->
+		<link rel='stylesheet' id='font-awesome'  href='css/fontawesome/css/all.css' type='text/css' media='all' />
+		<!-- Owl Carousel -->
+		<link rel='stylesheet' id='owl-carousel'  href='js/owl-carousel/owl.carousel.css' type='text/css' media='all' />
+		<!-- Main CSS File -->
+		<link rel='stylesheet' id='gleam-style-css'  href='style.css' type='text/css' media='all' />
+		<!-- favicons -->
+		<link rel="icon" href="images/icons/icon.svg" sizes="32x32" />
+		<link rel="icon" href="images/icons/icon.svg" sizes="192x192" />
+		<link rel="apple-touch-icon-precomposed" href="images/icons/icon.svg" />
+	</head>
+	<body class="home">
+		<div id="topnav"></div>
+		<div class="top-single-bkg " style="background-image:url('images/albums/gal-2/gal-2-01.jpg');">
+			<div class="inner-desc">
+				<div class="container">
+					<h1 class="post-title single-post-title">Portfolio Masonry 4 Cols</h1>
+				</div>
+			</div>
+		</div>
+		<div class="page-holder custom-page-template page-full fullscreen-page clearfix">
+			<!-- SECTION 1-->
+			<section class="section-holder margin-b72 aligncm">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<h2 class="section-title margin-b32">Heading Title</h2>
+						</div>
+						<div class="col-lg-6 margin-bm32">
+							<p>Appareat reformidans his te. Mundi erroribus ad eum, mea ut dicam nostro copiosae. Eligendi accusamus nec ex. Et usu ludus vitae tritani, suas deleniti pertinacia et quo. Duo veritus mediocrem ex, vidit fabellas vis ea.</p>
+						</div>
+						<div class="col-lg-6">
+							<p>Mea graeci vocent cu, usu aperiam temporibus ei, sit ex veri docendi. Ea mazim commune eam, id usu eligendi nominati democritum. Quas soleat verterem ut vix. Liber detracto cotidieque ut has.</p>
+						</div>
+					</div>
+					<!-- /row -->				
+				</div>
+				<!-- /container -->
+			</section>
+			<!-- /SECTION 1-->
+			<!-- SECTION 2-->
+			<section class="section-holder">
+				<div class="gallery-container loadGalleries">
+					<div class="container">
+						<div class="row layout-masonry gallery-holder gallery-masonry4cols">
+							<div class="col-sm-6 col-lg-3 blog-item-masonry gallery-post"> <a href="#" class="lightbox" title=""> <img class="img-fluid" src="" alt=""> </a></div>
+						</div>
+					</div>
+					</div>
+				<!-- /gallery-container -->	
+					<div class="container prev-next-gallery">
+						<div class="row meta-nav-holder port-meta-nav">
+							<div class="col-md-6 meta-nav">
+								<div class="pn-holder">
+									<div class="pn-img"> <a href="#"> <img class="img-fluid" src="images/albums/featured-images/gal-3-grid.jpg" alt="Prev Gallery"> </a></div>
+									<div class="pn-desc">
+										<div class="meta-nav-subtitle">
+											<h3><a href="#"></a></h3>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 meta-nav meta-nav-right">
+								<div class="pn-holder">
+									<div class="pn-desc">
+										<div class="meta-nav-subtitle">
+											<h3><a href="#">Ellen &amp; James &rarr;</a></h3>
+										</div>
+									</div>
+									<div class="pn-img"> <a href="#"> <img class="img-fluid" src="images/albums/featured-images/gal-2-grid.jpg" alt="Next Gallery"> </a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+			</section>
+			<!-- /SECTION 2-->
+			</div>
+		<div id="footer"></div>
+		<!-- FOOTER -->
+		<div class="scrollup">
+			<a class="scrolltop" href="#">
+			<i class="fa fa-chevron-up"></i>
+			</a>
+		</div>
+		<!-- JS --> 
+		<script src='js/jquery.js'></script>
+		<script src='js/jquery-migrate.min.js'></script>
+		<script src='css/bootstrap/js/popper.js'></script>
+		<script src='css/bootstrap/js/bootstrap.js'></script>
+		<script src='js/easing.js'></script>
+		<script src='js/fitvids.js'></script>
+		<script src='js/owl-carousel/owl.carousel.js'></script>
+		<script src='js/isotope.js'></script>
+		<script src='js/simple-lightbox.js'></script>
+		<!-- MAIN JS -->
+		<script src='js/init.js'></script>
+		<!-- CONTAT FORM JS -->
+		<script src='js/jquery.form.min.js'></script>
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+		<script>
+			jQuery(document).ready(function(){
+				jQuery('.loadGalleries').each(function() {
+					var par = jQuery(this);
+					var img = [];
+					loadData(function() {
+						let parent = jQuery(par);
+						let elem = parent.html();
+						jQuery(parent).html('');
+						let clone = jQuery(elem).clone();
+						let lines = sessionStorage.getItem('imagesText').split('\r\n');
+						for (let i = 0; i < lines.length; i++) {
+							let f = lines[i];
+							folderPath = f.replace('.', '').replace(':', '/');
+							let split = f.replace('.', '').replace(':', '/').split('/')
+							if (f && f.length > 0 && f[0] === '.' && f.split('/').length == 5) {
+								let timg = {};
+								timg.type = split[split.length-3];
+								timg.gallery = split[split.length-2];
+								timg.images = [];
+								i++;
+								while(i < lines.length && lines[i] != '') {
+									timg.images.push(folderPath + lines[i]);
+									i++ 
+								}
+								img.push(timg);
+							}
+						}
+						console.log(img);
+					});
+				});
+			});
+		</script>
+	</body>
+</html>

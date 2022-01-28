@@ -150,7 +150,7 @@
 			</div>
 			<!-- /SECTION 3-->
 			<!-- SECTION 4-->
-			<section class="section-holder margin-b72 alignc">
+			<section class="section-holder margin-b72 alignc" id="load">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-8 offset-lg-2">
@@ -254,5 +254,33 @@
 		<!-- CONTAT FORM JS -->
 		<script src='js/jquery.form.min.js'></script>
 		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+		<script>
+			jQuery(document).ready(function(){
+				jQuery('.loadGalleries').each(function() {
+					var par = jQuery(this);
+					loadData(function() {
+						let parent = jQuery(par);
+						let elem = parent.html();
+						jQuery(parent).html('');
+						let clone = jQuery(elem).clone();
+						let lines = sessionStorage.getItem('imagesText').split('\r\n');
+						let currentType = '', currentGallery = '', folderPath = '';
+						for (let i = 0; i < lines.length; i++) {
+							let f = lines[i];
+							if (f && f.length > 0 && f[0] === '.' && f.split('/').length == 5) {
+								folderPath = f.replace('.', '').replace(':', '/');
+								let split = f.replace('.', '').replace(':', '/').split('/');
+								currentType = split[split.length-3];
+								currentGallery = split[split.length-2];
+								jQuery(clone).find('.img-fluid').attr('src', folderPath + lines[i+1]);
+								jQuery(clone).find('.port-categ-masonry a').html(currentType);
+								jQuery(clone).find('.port-caption-masonry a').html(currentGallery);
+								parent.append(jQuery(clone).clone())
+							}
+						}
+					});
+				});
+			});
+		</script>
 	</body>
 </html>
