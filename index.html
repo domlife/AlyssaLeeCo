@@ -273,8 +273,8 @@
 								currentType = split[split.length-3];
 								currentGallery = split[split.length-2];
 								jQuery(clone).find('.img-fluid').attr('src', folderPath + lines[i+1]);
-								jQuery(clone).find('.port-categ-masonry a').html(currentType);
 								jQuery(clone).find('.port-caption-masonry a').html(currentGallery);
+								jQuery(clone).find('.port-categ-masonry a').html(currentType);
 								parent.append(jQuery(clone).clone())
 							}
 						}

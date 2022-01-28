@@ -55,7 +55,11 @@
 				<div class="gallery-container loadGalleries">
 					<div class="container">
 						<div class="row layout-masonry gallery-holder gallery-masonry4cols">
-							<div class="col-sm-6 col-lg-3 blog-item-masonry gallery-post"> <a href="#" class="lightbox" title=""> <img class="img-fluid" src="" alt=""> </a></div>
+							<div class="col-sm-6 col-lg-3 blog-item-masonry gallery-post"> 
+								<a href="#" class="lightbox" title="">
+									<img class="img-fluid" src="" alt="load">
+								</a>
+							</div>
 						</div>
 					</div>
 					</div>
@@ -112,14 +116,15 @@
 		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 		<script>
 			jQuery(document).ready(function(){
+				var _gallery = (new URLSearchParams(window.location.search)).get('g');
+				console.log(_gallery);
 				jQuery('.loadGalleries').each(function() {
 					var par = jQuery(this);
 					var img = [];
 					loadData(function() {
 						let parent = jQuery(par);
-						let elem = parent.html();
-						jQuery(parent).html('');
-						let clone = jQuery(elem).clone();
+						let elem = parent.find(jQuery('div.gallery-holder')).html();
+						jQuery(parent).find('.gallery-holder').html('');
 						let lines = sessionStorage.getItem('imagesText').split('\r\n');
 						for (let i = 0; i < lines.length; i++) {
 							let f = lines[i];
@@ -129,16 +134,21 @@
 								let timg = {};
 								timg.type = split[split.length-3];
 								timg.gallery = split[split.length-2];
-								timg.images = [];
-								i++;
-								while(i < lines.length && lines[i] != '') {
-									timg.images.push(folderPath + lines[i]);
-									i++ 
+								if (timg.gallery == _gallery) {
+									timg.images = [];
+									i++
+									while(i < lines.length && lines[i] != '') {
+										timg.images.push(folderPath + lines[i]);
+										let clone = jQuery(elem).clone();
+										jQuery(clone).find('img').attr('src', folderPath + lines[i]);
+										parent.find('.gallery-holder').append(jQuery(clone).clone())
+										console.log(jQuery(parent).html());
+										i++ 
+									}
+									img.push(timg);
 								}
-								img.push(timg);
 							}
 						}
-						console.log(img);
 					});
 				});
 			});
