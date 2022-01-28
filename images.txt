@@ -5,33 +5,33 @@ New Born/
 Weddings/
 
 ./images/galleries/Elopements:
-Holden & Ashly/
+Holden & Ashly Elopement/
 
-./images/galleries/Elopements/Holden & Ashly:
+./images/galleries/Elopements/Holden & Ashly Elopement:
 3L3A2389_websize.jpg
 3L3A2390_websize.jpg
 3L3A2391-2_websize.jpg
 
 ./images/galleries/Families:
-Holden & Ashly/
+Holden & Ashly Family/
 
-./images/galleries/Families/Holden & Ashly:
+./images/galleries/Families/Holden & Ashly Family:
 3L3A2389_websize.jpg
 3L3A2390_websize.jpg
 3L3A2391-2_websize.jpg
 
 ./images/galleries/New Born:
-Holden & Ashly/
+Holden & Ashly Newborn/
 
-./images/galleries/New Born/Holden & Ashly:
+./images/galleries/New Born/Holden & Ashly Newborn:
 3L3A2389_websize.jpg
 3L3A2390_websize.jpg
 3L3A2391-2_websize.jpg
 
 ./images/galleries/Weddings:
-Holden & Ashly/
+Holden & Ashly Wedding/
 
-./images/galleries/Weddings/Holden & Ashly:
+./images/galleries/Weddings/Holden & Ashly Wedding:
 3L3A2389_websize.jpg
 3L3A2390_websize.jpg
 3L3A2391-2_websize.jpg
