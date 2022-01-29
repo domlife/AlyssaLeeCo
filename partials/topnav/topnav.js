@@ -70,7 +70,9 @@ var loadData = function(callback) {
 
 jQuery('.loadGalleryNames').each(function() {
     var par = jQuery(this)
+    console.log('hit');
     loadData(function() {
+        console.log('in');
         let parent = jQuery(par);
         let elem = parent.html();
         jQuery(parent).html('');
