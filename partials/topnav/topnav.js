@@ -86,17 +86,6 @@ jQuery('.loadGalleryNames').each(function() {
                 currentGallery = split[split.length-2];
                 jQuery(clone).find('a').attr('href', 'gallery.html?g=' + encodeURIComponent(currentGallery)).html(currentGallery);
                 parent.append(jQuery(clone).clone());
-                // i++;
-                // while (i < lines.length) {
-                // 	if (lines[i] == '') {
-                // 		break;
-                // 	}
-                // 	jQuery(clone).find('.img-fluid').attr('src', folderPath + lines[i]);
-                // 	jQuery(clone).find('.port-categ-masonry a').html(currentType);
-                // 	jQuery(clone).find('.port-caption-masonry a').html(currentGallery);
-                // 	parent.append(jQuery(clone).clone());
-                // 	i++;
-                // }
             }
         }
     });
