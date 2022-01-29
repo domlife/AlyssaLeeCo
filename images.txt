@@ -11,6 +11,7 @@ Holden & Ashly Elopement/
 3L3A2389_websize.jpg
 3L3A2390_websize.jpg
 3L3A2391-2_websize.jpg
+description.txt
 
 ./images/galleries/Families:
 Holden & Ashly Family/
