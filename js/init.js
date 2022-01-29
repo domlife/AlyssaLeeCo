@@ -1,6 +1,6 @@
 var loadData = function(callback) {
 	if (!sessionStorage.getItem('imagesText') || sessionStorage.getItem('imagesText') == '') {
-		jQuery.get('images.txt', function(_data) {
+		jQuery.get('/images.txt', function(_data) {
 			sessionStorage.setItem('imagesText', _data);
 			callback();
 		}, 'text');
