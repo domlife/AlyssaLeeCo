@@ -23,10 +23,10 @@
 	</head>
 	<body class="home">
 		<div id="topnav"></div>
-		<div class="top-single-bkg " style="background-image:url('images/albums/gal-2/gal-2-01.jpg');">
+		<div class="top-single-bkg" style="background-image:url('images/albums/gal-2/gal-2-01.jpg');">
 			<div class="inner-desc">
 				<div class="container">
-					<h1 class="post-title single-post-title">Portfolio Masonry 4 Cols</h1>
+					<h1 class="post-title single-post-title"></h1>
 				</div>
 			</div>
 		</div>
@@ -36,13 +36,10 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-12">
-							<h2 class="section-title margin-b32">Heading Title</h2>
+							<h2 class="section-title margin-b32"></h2>
 						</div>
-						<div class="col-lg-6 margin-bm32">
-							<p>Appareat reformidans his te. Mundi erroribus ad eum, mea ut dicam nostro copiosae. Eligendi accusamus nec ex. Et usu ludus vitae tritani, suas deleniti pertinacia et quo. Duo veritus mediocrem ex, vidit fabellas vis ea.</p>
-						</div>
-						<div class="col-lg-6">
-							<p>Mea graeci vocent cu, usu aperiam temporibus ei, sit ex veri docendi. Ea mazim commune eam, id usu eligendi nominati democritum. Quas soleat verterem ut vix. Liber detracto cotidieque ut has.</p>
+						<div class="col-lg-12 margin-bm32">
+							<p></p>
 						</div>
 					</div>
 					<!-- /row -->				
@@ -117,13 +114,13 @@
 		<script>
 			jQuery(document).ready(function(){
 				var _gallery = (new URLSearchParams(window.location.search)).get('g');
-				console.log(_gallery);
 				jQuery('.loadGalleries').each(function() {
 					var par = jQuery(this);
 					var img = [];
 					loadData(function() {
 						let parent = jQuery(par);
 						let elem = parent.find(jQuery('div.gallery-holder')).html();
+						let index = -1;
 						jQuery(parent).find('.gallery-holder').html('');
 						let lines = sessionStorage.getItem('imagesText').split('\r\n');
 						for (let i = 0; i < lines.length; i++) {
@@ -135,21 +132,67 @@
 								timg.type = split[split.length-3];
 								timg.gallery = split[split.length-2];
 								if (timg.gallery == _gallery) {
-									timg.images = [];
-									i++
-									while(i < lines.length && lines[i] != '') {
-										timg.images.push(folderPath + lines[i]);
-										let clone = jQuery(elem).clone();
-										jQuery(clone).find('img').attr('src', folderPath + lines[i]);
-										parent.find('.gallery-holder').append(jQuery(clone).clone())
-										console.log(jQuery(parent).html());
-										i++ 
-									}
-									img.push(timg);
+									index = img.length;
 								}
+								timg.images = [];
+								i++
+								let first = true;
+								while(i < lines.length && lines[i] != '') {
+									let href = folderPath + lines[i];
+									timg.images.push(href);
+									if (timg.gallery == _gallery) {
+										jQuery.get(folderPath + 'description.txt', function(data) {
+											jQuery('section.section-holder p').html(data);
+										});
+										if (first) {
+											jQuery('.top-single-bkg').css('background-image', "url('" + href + "')");
+											jQuery('.top-single-bkg').find('h1.post-title').html(timg.gallery);
+											jQuery('section.section-holder .section-title').html(timg.gallery + " - " + timg.type);
+											first = false;
+										} else {
+											let clone = jQuery(elem).clone();
+											jQuery(clone).find('a').attr('href', href.substring(1, href.length));
+											jQuery(clone).find('img').attr('src', href);
+											parent.find('.gallery-holder').append(jQuery(clone).clone())
+										}
+									}
+									i++ 
+								}
+								img.push(timg);
 							}
 						}
+						if (index != -1) {
+							let prev = 0, next = 0;
+							if (index == 0) {
+								prev = img.length - 1;
+								next = index + 1;
+							} else if (index == img.length - 1) {
+								prev = index - 1;
+								next = 0;
+							} else {
+								prev = index - 1;
+								next = index + 1;
+							}
+							let purl = new URL("gallery.html", window.location);
+							purl.searchParams.append('g', img[prev].gallery);
+							jQuery('div.meta-nav:not(.meta-nav-right) .img-fluid').attr('src', img[prev].images && img[prev].images.length > 0 ? img[prev].images[0] : '#');
+							jQuery('div.meta-nav:not(.meta-nav-right)').find('.meta-nav-subtitle h3').html("← " + img[prev].gallery);
+							jQuery('div.meta-nav:not(.meta-nav-right)').find('.meta-nav-subtitle h3').html("← " + img[prev].gallery);
+							jQuery('div.meta-nav:not(.meta-nav-right)').find('a').attr('href', purl);
+
+							console.log(img);
+							let nurl = new URL("gallery.html", window.location);
+							nurl.searchParams.append('g', img[next].gallery);
+							jQuery('div.meta-nav.meta-nav-right .img-fluid').attr('src', img[next].images && img[next].images.length > 0 ? img[next].images[0] : '#');
+							jQuery('div.meta-nav.meta-nav-right').find('.meta-nav-subtitle h3').html(img[next].gallery + " →");
+							jQuery('div.meta-nav.meta-nav-right').find('a').attr('href', nurl);
+						}
 					});
+				});
+				jQuery('.gallery-post a').simpleLightbox({
+					heightRatio: 1,
+					widthRatio: 0.8
+
 				});
 			});
 		</script>

@@ -73,12 +73,13 @@ var loadData = function(callback) {
 		if (('#topnav').length) {
 			$('#topnav').load('/partials/topnav/topnav.html', function() { $.getScript('partials/topnav/topnav.js'); });
 		};
-		if ($('#footer').length) {
-			$('#footer').load('/partials/footer/footer.html')
-		};
 		if ($('#instagram').length) {
 			$('#instagram').load('/partials/instagram/instagram.html')
 		};
+		if ($('footer').length) {
+			$('#footer').load('/partials/footer/footer.html', function() { $.getScript("https://www.google.com/recaptcha/api.js"); })
+		};
+		
         //masonry
         var blogItems = $('.layout-masonry');
         var portfolioItems = $('.portfolio-layout-masonry');

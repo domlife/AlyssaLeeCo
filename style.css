@@ -1687,7 +1687,6 @@ a.social-skype:hover {
 
 .single-post-title {
 	color: #fff;
-	font-weight: 700;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 	line-height: 1.3em;
@@ -3566,7 +3565,7 @@ aside table td,
 */
 
 footer {
-	margin-top: 108px;
+	/* margin-top: 108px; */
 	padding: 0 0 54px 0;
 	background: var(--footer-background-color);
 }
@@ -3600,39 +3599,39 @@ footer a,
 	letter-spacing: 0.05em;
 }
 
-#footer-instagram {
+#instagram {
 	text-align: center;
 	position: relative;
 	margin-bottom: -108px;
 }
 
-#footer-instagram .widgettitle {
+#instagram .widgettitle {
 	display: inline-block;
 	margin-bottom: 36px;
 }
 
-#footer-instagram .instagram-pics {
+#instagram .instagram-pics {
 	font-size: 0;
 	margin: 0;
 }
 
-#footer-instagram .instagram-pics li {
+#instagram .instagram-pics li {
 	display: inline-block;
 	margin: 0;
 	width: 12.5%;
 }
 
-#footer-instagram .instagram-pics li img {
+#instagram .instagram-pics li img {
 	max-width: 100%;
 	width: auto;
 	height: auto;
 }
 
-#footer-instagram .instagram-pics li img:hover {
+#instagram .instagram-pics li img:hover {
 	opacity: 0.9;
 }
 
-#footer-instagram .clear {
+#instagram .clear {
 	bottom: 7px;
 	font-size: 12px;
 	left: 0;
@@ -3642,7 +3641,7 @@ footer a,
 	right: 0;
 }
 
-#footer-instagram .clear a {
+#instagram .clear a {
 	background: #ffffff;
 	border: medium none;
 	color: #151515;
@@ -3930,7 +3929,7 @@ footer a,
 	margin-top: -54px;
 }
 
-.error404 #footer-instagram {
+.error404 #instagram {
 	display: none;
 }
 
@@ -4839,10 +4838,10 @@ body.hidden-scroll {
 	.inner-desc h1 {
 		word-wrap: break-word;
 	}
-	#footer-instagram .instagram-pics li {
+	#instagram .instagram-pics li {
 		width: 25%;
 	}
-	#footer-instagram,
+	#instagram,
 	.top-page404 {
 		margin-bottom: -72px;
 	}
@@ -5077,4 +5076,8 @@ body.hidden-scroll {
 .shadowed {
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, 
 				rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.form-control, .form-control{
+	background-color: var(--body-background);
 }
