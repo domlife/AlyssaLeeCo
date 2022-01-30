@@ -223,23 +223,17 @@
 		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 		<script>
 			jQuery(document).ready(function(){
-				console.log('loading galleries');
 				jQuery('.loadGalleries').each(function() {
-					console.log('gallery detected');
 					var par = jQuery(this);
 					loadData(function() {
-						console.log('callback');
 						let parent = jQuery(par);
 						let elem = parent.html();
 						jQuery(parent).html('');
 						let clone = jQuery(elem).clone();
 						let lines = sessionStorage.getItem('imagesText').split('\n');
-						console.log(lines);
 						let currentType = '', currentGallery = '', folderPath = '';
 						for (let i = 0; i < lines.length; i++) {
-							console.log('entered loop');
 							let f = lines[i];
-							console.log(f, f.length, f[0], f.split('/'));
 							if (f && f.length > 0 && f[0] === '.' && f.split('/').length == 5) {
 								folderPath = f.replace('.', '').replace(':', '/');
 								let split = f.replace('.', '').replace(':', '/').split('/');
