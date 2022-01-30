@@ -228,6 +228,7 @@
 					console.log('gallery detected');
 					var par = jQuery(this);
 					loadData(function() {
+						console.log('callback');
 						let parent = jQuery(par);
 						let elem = parent.html();
 						jQuery(parent).html('');
