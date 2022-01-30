@@ -180,7 +180,6 @@
 							jQuery('div.meta-nav:not(.meta-nav-right)').find('.meta-nav-subtitle h3').html("← " + img[prev].gallery);
 							jQuery('div.meta-nav:not(.meta-nav-right)').find('a').attr('href', purl);
 
-							console.log(img);
 							let nurl = new URL("gallery.html", window.location);
 							nurl.searchParams.append('g', img[next].gallery);
 							jQuery('div.meta-nav.meta-nav-right .img-fluid').attr('src', img[next].images && img[next].images.length > 0 ? img[next].images[0] : '#');
@@ -192,7 +191,6 @@
 				jQuery('.gallery-post a').simpleLightbox({
 					heightRatio: 1,
 					widthRatio: 0.8
-
 				});
 			});
 		</script>

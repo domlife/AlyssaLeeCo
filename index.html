@@ -185,10 +185,10 @@
 				<div class="container">
 					<div class="row align-items-center">
 						<div class="col-lg-8">
-							<h3 class="section-title margin-bm32">Let's start building your adventure today, why wait?</h3>
+							<h3 class="section-title margin-bm32">Let's start building your adventure today, why wait? Book a consultatation me with to get started!</h3>
 						</div>
 						<div class="col-lg-4 alignr">
-							<a href="contact.html" class="read-more">Contact Us</a>
+							<a href="bookings.html" class="read-more">Book</a>
 						</div>
 					</div>
 				</div>
@@ -223,7 +223,9 @@
 		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 		<script>
 			jQuery(document).ready(function(){
+				console.log('loading galleries');
 				jQuery('.loadGalleries').each(function() {
+					console.log('gallery detected');
 					var par = jQuery(this);
 					loadData(function() {
 						let parent = jQuery(par);
@@ -245,6 +247,7 @@
 								let url = new URL("gallery.html", window.location);
 								url.searchParams.append('g', currentGallery);
 								jQuery(clone).find('a').attr('href', url);
+								console.log(clone);
 								parent.append(jQuery(clone).clone())
 							}
 						}

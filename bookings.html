@@ -20,17 +20,28 @@
 		<link rel="icon" href="images/icons/icon.svg" sizes="32x32" />
 		<link rel="icon" href="images/icons/icon.svg" sizes="192x192" />
 		<link rel="apple-touch-icon-precomposed" href="images/icons/icon.svg" />
+		<style>
+			.footerSection {
+				display:none;
+			}
+		</style>
 	</head>
 	<body class="home">
-		<div id="topnav"></div>
-		<!-- FOOTER -->
-		<footer id="footer"></footer>
-		<!-- FOOTER -->
+		
+		<section>
+			<div id="topnav"></div>
+			<div class="calendar">
+				<iframe id="calendar-iframe" width="560" height="315" 
+					src="https://outlook.office365.com/owa/calendar/Booking@AlyssaLee.co/bookings/" 
+					frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+					loading="lazy" allowfullscreen></iframe>
+			</div>
+		</section>
 		<div class="scrollup">
 			<a class="scrolltop" href="#">
 			<i class="fa fa-chevron-up"></i>
 			</a>
-		</div>
+		</div> 	
 		<!-- JS --> 
 		<script src='js/jquery.js'></script>
 		<script src='js/jquery-migrate.min.js'></script>
@@ -46,5 +57,12 @@
 		<!-- CONTAT FORM JS -->
 		<script src='js/jquery.form.min.js'></script>
 		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+		<script>
+			window.onload = function() {
+				let myiFrame = document.getElementById("calendar-iframe");
+				let doc = myiFrame.contentDocument;
+				doc.body.innerHTML = doc.body.innerHTML + '<style>#calendar-iframe { display: none }</style>';
+			}
+		</script>
 	</body>
 </html>

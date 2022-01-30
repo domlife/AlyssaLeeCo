@@ -23,6 +23,14 @@
 	</head>
 	<body class="home">
 		<div id="topnav"></div>
+		<div class="top-single-bkg " style="background-image:url('/images/thank-you-bg.jpg');margin-bottom:0px">
+			<div class="inner-desc">
+				<div class="container">
+					<h1 class="post-title single-post-title"></h1>
+					<span class="post-subtitle page-subtitle"></span>
+				</div>
+			</div>
+		</div>
 		<!-- FOOTER -->
 		<footer id="footer"></footer>
 		<!-- FOOTER -->
@@ -46,5 +54,10 @@
 		<!-- CONTAT FORM JS -->
 		<script src='js/jquery.form.min.js'></script>
 		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+		<script>
+			var name = (new URLSearchParams(window.location.search)).get('n') || '';
+			jQuery('.post-title').html("Thank you " + name + "!");
+			jQuery('.post-subtitle').html("We will be getting back to you as soon as possible.");
+		</script>
 	</body>
 </html>
