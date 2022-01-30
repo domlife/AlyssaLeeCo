@@ -1,4 +1,5 @@
 var loadData = function(callback) {
+	console.log('entering load');
 	if (!sessionStorage.getItem('imagesText') || sessionStorage.getItem('imagesText') == '') {
 		console.log('pulling image text from session');
 		jQuery.get('/images.txt', function(_data) {
