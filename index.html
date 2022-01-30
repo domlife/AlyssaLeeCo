@@ -234,9 +234,12 @@
 						jQuery(parent).html('');
 						let clone = jQuery(elem).clone();
 						let lines = sessionStorage.getItem('imagesText').split('\r\n');
+						console.log(lines);
 						let currentType = '', currentGallery = '', folderPath = '';
 						for (let i = 0; i < lines.length; i++) {
+							consol.line('entered loop');
 							let f = lines[i];
+							console.log(f, f.length, f[0], f.split('/'));
 							if (f && f.length > 0 && f[0] === '.' && f.split('/').length == 5) {
 								folderPath = f.replace('.', '').replace(':', '/');
 								let split = f.replace('.', '').replace(':', '/').split('/');
