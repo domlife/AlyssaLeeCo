@@ -75,7 +75,7 @@ jQuery('.loadGalleryNames').each(function() {
         let elem = parent.html();
         jQuery(parent).html('');
         let clone = jQuery(elem).clone();
-        let lines = sessionStorage.getItem('imagesText').split('\r\n');
+        let lines = sessionStorage.getItem('imagesText').split('\n');
         let currentType = '', currentGallery = '', folderPath = '';
         for (let i = 0; i < lines.length; i++) {
             let f = lines[i];
