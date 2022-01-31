@@ -1,7 +1,6 @@
 ./images/galleries/:
 Elopements/
 New Born/
-Weddings/
 
 ./images/galleries/Elopements:
 Holden & Ashly Elopement/
@@ -49,11 +48,3 @@ Holden & Ashly Newborn/
 7.jpg
 8.jpg
 9.jpg
-
-./images/galleries/Weddings:
-Holden & Ashly Wedding/
-
-./images/galleries/Weddings/Holden & Ashly Wedding:
-3L3A2389_websize.jpg
-3L3A2390_websize.jpg
-3L3A2391-2_websize.jpg
