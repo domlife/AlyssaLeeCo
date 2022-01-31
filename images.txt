@@ -7,6 +7,7 @@ Weddings/
 Holden & Ashly Elopement/
 
 ./images/galleries/Elopements/Holden & Ashly Elopement:
+000_3L3A2691_websize.jpg
 3L3A2227_websize.jpg
 3L3A2257_websize.jpg
 3L3A2278_websize.jpg
@@ -25,7 +26,6 @@ Holden & Ashly Elopement/
 3L3A2634_websize.jpg
 3L3A2650_websize.jpg
 3L3A2669_websize.jpg
-3L3A2691_websize.jpg
 3L3A2706_websize.jpg
 3L3A2826_websize.jpg
 3L3A2869_websize.jpg
