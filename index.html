@@ -252,7 +252,6 @@
 								let url = new URL("gallery.html", window.location);
 								url.searchParams.append('g', currentGallery);
 								jQuery(clone).find('a').attr('href', url);
-								console.log(clone);
 								parent.append(jQuery(clone).clone())
 							}
 						}
