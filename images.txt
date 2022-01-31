@@ -3,9 +3,9 @@ Elopements/
 New Born/
 
 ./images/galleries/Elopements:
-Holden & Ashly Elopement/
+Holden & Ashly/
 
-./images/galleries/Elopements/Holden & Ashly Elopement:
+./images/galleries/Elopements/Holden & Ashly:
 000_3L3A2691_websize.jpg
 3L3A2227_websize.jpg
 3L3A2257_websize.jpg
@@ -31,9 +31,9 @@ Holden & Ashly Elopement/
 description.txt
 
 ./images/galleries/New Born:
-Holden & Ashly Newborn/
+Maria & JR/
 
-./images/galleries/New Born/Holden & Ashly Newborn:
+./images/galleries/New Born/Maria & JR:
 1.jpg
 10.jpg
 11.jpg
