@@ -8,8 +8,6 @@ Weddings/
 Holden & Ashly Elopement/
 
 ./images/galleries/Elopements/Holden & Ashly Elopement:
-3L3A2389_websize.jpg
-3L3A2390_websize.jpg
 description.txt
 
 ./images/galleries/Families:
