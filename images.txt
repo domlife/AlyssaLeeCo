@@ -8,33 +8,8 @@ Weddings/
 Holden & Ashly Elopement/
 
 ./images/galleries/Elopements/Holden & Ashly Elopement:
-3L3A2147.jpg
-3L3A2227.jpg
-3L3A2257.jpg
-3L3A2278.jpg
-3L3A2320.jpg
-3L3A2322.jpg
-3L3A2336.jpg
-3L3A2353.jpg
-3L3A2363.jpg
-3L3A2373.jpg
 3L3A2389_websize.jpg
 3L3A2390_websize.jpg
-3L3A2393.jpg
-3L3A2447.jpg
-3L3A2464.jpg
-3L3A2468.jpg
-3L3A2487.jpg
-3L3A2533.jpg
-3L3A2634.jpg
-3L3A2650.jpg
-3L3A2669.jpg
-3L3A2691.jpg
-3L3A2706.jpg
-3L3A2826.jpg
-3L3A2844.jpg
-3L3A2869.jpg
-3L3A2874.jpg
 description.txt
 
 ./images/galleries/Families:
