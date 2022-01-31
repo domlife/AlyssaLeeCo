@@ -35,9 +35,23 @@ description.txt
 Holden & Ashly Newborn/
 
 ./images/galleries/New Born/Holden & Ashly Newborn:
+1.jpg
+10.jpg
+11.jpg
+12.jpg
+13.jpg
+14.jpg
+2.jpg
+3.jpg
 3L3A2389_websize.jpg
 3L3A2390_websize.jpg
 3L3A2391-2_websize.jpg
+4.jpg
+5.jpg
+6.jpg
+7.jpg
+8.jpg
+9.jpg
 
 ./images/galleries/Weddings:
 Holden & Ashly Wedding/
