@@ -1,5 +1,6 @@
 ./images/galleries/:
 Elopements/
+Maria & JR
 New Born/
 Weddings/
 
