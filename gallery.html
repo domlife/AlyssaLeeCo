@@ -28,7 +28,7 @@
 	</head>
 	<body class="home">
 		<div id="topnav"></div>
-		<div class="top-single-bkg" style="background-image:url('images/albums/gal-2/gal-2-01.jpg');">
+		<div id="main-banner" class="top-single-bkg" style="background-image:url('images/albums/gal-2/gal-2-01.jpg');">
 			<div class="inner-desc">
 				<div class="container">
 					<h1 class="post-title single-post-title"></h1>
@@ -133,25 +133,29 @@
 							folderPath = f.replace('.', '').replace(':', '/');
 							let split = f.replace('.', '').replace(':', '/').split('/')
 							if (f && f.length > 0 && f[0] === '.' && f.split('/').length == 5) {
-								let timg = {};
+								var timg = {};
 								timg.type = split[split.length-3];
 								timg.gallery = split[split.length-2];
 								if (timg.gallery == _gallery) {
 									index = img.length;
 								}
 								timg.images = [];
-								i++
+								i++;
 								let first = true;
-								while(i < lines.length && lines[i] != '') {
-									let href = folderPath + lines[i];
+								var s = lines[i].split('.');
+								var ext = s.pop().trim();
+								while(i < lines.length && (ext == 'jpg' || ext == 'png')) {
+									let href = folderPath.trim() + lines[i].trim();
 									timg.images.push(href);
 									if (timg.gallery == _gallery) {
 										jQuery.get(folderPath + 'description.txt', function(data) {
 											jQuery('section.section-holder p').html(data);
 										});
 										if (first) {
-											jQuery('.top-single-bkg').css('background-image', "url('" + href + "')");
-											jQuery('.top-single-bkg').find('h1.post-title').html(timg.gallery);
+											console.log(href);
+											console.log(jQuery('#main-banner'));
+											jQuery('#main-banner').css('background-image', "url('" + href + "')");
+											jQuery('#main-banner').find('h1.post-title').html(timg.gallery);
 											jQuery('section.section-holder .section-title').html(timg.gallery + " - " + timg.type);
 											first = false;
 										} else {
@@ -161,7 +165,9 @@
 											parent.find('.gallery-holder').append(jQuery(clone).clone())
 										}
 									}
-									i++ 
+									i++;
+									s = lines[i].split('.');
+						 			ext = s.pop().trim();
 								}
 								img.push(timg);
 							}

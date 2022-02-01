@@ -29,14 +29,11 @@ var loadData = function(callback) {
         loop: true,
         lazLoad: true,
         autoplay: true,
-        autoplayTimeout: 5000,
+        autoplayTimeout: 8000,
         autoplayHoverPause: false,
         animateOut: 'fadeOut',
-        dots: false,
-        nav: true,
-        navText: '',
         dots: true,
-        navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
+        nav: true
     });
 
     $('.portfolio-slider-4items').owlCarousel({
@@ -59,15 +56,6 @@ var loadData = function(callback) {
             },
 
         }
-    });
-
-    $('.testimonial-slider').owlCarousel({
-        items: 1,
-        loop: true,
-        autoHeight: true,
-        autoplay: true,
-        autoplayTimeout: 8000,
-        animateOut: 'fadeOut'
     });
 
     $(window).on('load', function() {

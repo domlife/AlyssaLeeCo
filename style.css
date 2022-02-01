@@ -2704,6 +2704,7 @@ h2.port-title-masonry-v2 {
 
 .testimonial-slider .owl-dots {
 	position: relative;
+	top: -50px;
 }
 
 .testimonial-info {
@@ -5108,3 +5109,6 @@ body.hidden-scroll {
 	width: 100%;
 }
 
+.testimonial-text, .testimonial-name{
+	color: white;
+}
