@@ -16,7 +16,7 @@
 :root {
 	--body-font: gill-sans-nova;
 	--body-color: #858585;
-	--body-background: #FAF9F6;
+	--body-background: #f9f9f9;
 	--body-font-size: 16px;
 	--body-line-height: 1.7;
 	--body-letter-spacing: .1em;
@@ -5111,4 +5111,8 @@ body.hidden-scroll {
 
 .testimonial-text, .testimonial-name{
 	color: white;
+}
+
+#contact-form-holder input, #contact-form-holder textarea {
+	background-color: #f9f9f9;
 }
