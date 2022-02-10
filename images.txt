@@ -1,6 +1,6 @@
 ./images/galleries/:
 Elopements/
-New Born/
+Maternity/
 
 ./images/galleries/Elopements:
 Holden & Ashly/
@@ -30,10 +30,10 @@ Holden & Ashly/
 3L3A2869_websize.jpg
 description.txt
 
-./images/galleries/New Born:
+./images/galleries/Maternity:
 Maria & JR/
 
-./images/galleries/New Born/Maria & JR:
+./images/galleries/Maternity/Maria & JR:
 1.jpg
 10.jpg
 11.jpg
