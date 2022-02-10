@@ -31,12 +31,8 @@ Holden & Ashly/
 description.txt
 
 ./images/galleries/Maternity:
-Marfa_ Tx_/
 Maria & JR/
 Sabrina & Ryan/
-
-./images/galleries/Maternity/Marfa_ Tx_:
-blog-9.jpg
 
 ./images/galleries/Maternity/Maria & JR:
 1.jpg
