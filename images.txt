@@ -1,6 +1,7 @@
 ./images/galleries/:
 Elopements/
 Maternity/
+Weddings/
 
 ./images/galleries/Elopements:
 Alexa & Peter/
@@ -90,3 +91,44 @@ Sabrina & Ryan/
 3L3A9255_websize.jpg
 3L3A9282_websize.jpg
 description.txt
+
+./images/galleries/Weddings:
+Priscilla & JF/
+
+./images/galleries/Weddings/Priscilla & JF:
+3L3A1584_websize.jpg
+3L3A1621_websize.jpg
+3L3A1632_websize.jpg
+3L3A1634_websize.jpg
+3L3A1646_websize.jpg
+3L3A1660_websize.jpg
+3L3A1714_websize.jpg
+3L3A1719_websize.jpg
+3L3A1765_websize.jpg
+3L3A1790_websize.jpg
+3L3A1817_websize.jpg
+3L3A1829_websize.jpg
+3L3A1876_websize.jpg
+3L3A1892_websize.jpg
+3L3A1910_websize.jpg
+3L3A1934_websize.jpg
+3L3A1950_websize.jpg
+3L3A1964_websize.jpg
+3L3A1988_websize.jpg
+3L3A1996_websize.jpg
+3L3A2033_websize.jpg
+3L3A2049_websize.jpg
+3L3A2052_websize.jpg
+3L3A2059_websize.jpg
+3L3A2082_websize.jpg
+3L3A2094_websize.jpg
+3L3A2103_websize.jpg
+3L3A2104_websize.jpg
+3L3A2110_websize.jpg
+3L3A2123_websize.jpg
+3L3A2195_websize.jpg
+3L3A2302_websize.jpg
+3L3A2325_websize.jpg
+3L3A2342_websize.jpg
+3L3A2345_websize.jpg
+3L3A2485_websize.jpg
