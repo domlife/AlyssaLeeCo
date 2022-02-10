@@ -32,6 +32,7 @@ description.txt
 
 ./images/galleries/Maternity:
 Maria & JR/
+Sabrina & Ryan/
 
 ./images/galleries/Maternity/Maria & JR:
 1.jpg
@@ -48,3 +49,6 @@ Maria & JR/
 7.jpg
 8.jpg
 9.jpg
+
+./images/galleries/Maternity/Sabrina & Ryan:
+description.txt
