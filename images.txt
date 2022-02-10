@@ -96,6 +96,7 @@ description.txt
 Priscilla & JF/
 
 ./images/galleries/Weddings/Priscilla & JF:
+111.jpg
 3L3A1584_websize.jpg
 3L3A1621_websize.jpg
 3L3A1632_websize.jpg
@@ -117,7 +118,6 @@ Priscilla & JF/
 3L3A1988_websize.jpg
 3L3A1996_websize.jpg
 3L3A2033_websize.jpg
-3L3A2049_websize.jpg
 3L3A2052_websize.jpg
 3L3A2059_websize.jpg
 3L3A2082_websize.jpg
