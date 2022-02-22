@@ -62,23 +62,9 @@ Holden & Ashly/
 description.txt
 
 ./images/galleries/Maternity:
-Brianna & Michael/
 Keeley & Brandon/
 Maria & JR/
 Sabrina & Ryan/
-
-./images/galleries/Maternity/Brianna & Michael:
-3L3A0024.jpg
-3L3A0117.jpg
-3L3A0139.jpg
-3L3A0172.jpg
-3L3A0198.jpg
-3L3A0243.jpg
-3L3A0261.jpg
-3L3A0340.jpg
-3L3A0360.jpg
-3L3A0429.jpg
-3L3A9987.jpg
 
 ./images/galleries/Maternity/Keeley & Brandon:
 3L3A0571.jpg
