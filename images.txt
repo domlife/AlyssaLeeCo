@@ -64,6 +64,7 @@ description.txt
 ./images/galleries/Maternity:
 Brianna & Michael/
 Keeley & Brandon/
+Maria & JR/
 Sabrina & Ryan/
 
 ./images/galleries/Maternity/Brianna & Michael:
@@ -102,6 +103,22 @@ Sabrina & Ryan/
 3L3A1007_websize.jpg
 3L3A1009_websize.jpg
 3L3A1072_websize.jpg
+
+./images/galleries/Maternity/Maria & JR:
+1.jpg
+10.jpg
+11.jpg
+12.jpg
+13.jpg
+14.jpg
+2.jpg
+3.jpg
+4.jpg
+5.jpg
+6.jpg
+7.jpg
+8.jpg
+9.jpg
 
 ./images/galleries/Maternity/Sabrina & Ryan:
 3L3A0378_websize.jpg
