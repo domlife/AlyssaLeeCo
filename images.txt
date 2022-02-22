@@ -63,6 +63,7 @@ description.txt
 
 ./images/galleries/Maternity:
 Brianna & Michael/
+Keeley & Brandon/
 Maria & JR/
 Sabrina & Ryan/
 
@@ -82,6 +83,26 @@ Sabrina & Ryan/
 3L3A0360_websize.jpg
 3L3A0429_websize.jpg
 3L3A0493_websize.jpg
+
+./images/galleries/Maternity/Keeley & Brandon:
+3L3A0600_websize.jpg
+3L3A0655_websize.jpg
+3L3A0689_websize.jpg
+3L3A0694_websize.jpg
+3L3A0717-2_websize.jpg
+3L3A0728_websize.jpg
+3L3A0742_websize.jpg
+3L3A0745_websize.jpg
+3L3A0750_websize.jpg
+3L3A0764_websize.jpg
+3L3A0812_websize.jpg
+3L3A0873_websize.jpg
+3L3A0905_websize.jpg
+3L3A0940_websize.jpg
+3L3A0966_websize.jpg
+3L3A1007_websize.jpg
+3L3A1009_websize.jpg
+3L3A1072_websize.jpg
 
 ./images/galleries/Maternity/Maria & JR:
 1.jpg
