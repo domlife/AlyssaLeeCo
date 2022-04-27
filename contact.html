@@ -28,49 +28,19 @@
 	</head>
 	<body class="home">
 		<div id="topnav"></div>
-		<!-- /PAGE TOP -->
-		<!-- PAGE CONTENT -->
-		<div class="page-holder custom-page-template page-full fullscreen-page clearfix" style="padding-top: 80px">
-			<!-- SECTION 1-->
-			<section class="section-holder">
+		<div class="page-holder custom-page-template page-full fullscreen-page clearfix">
+			<section class="section-holder mb-0">
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-6 margin-bm54 aligncm">
-							<div class="margin-r54">
-								<h2 class="section-title margin-b32">Do you have any questions?</h2>
-								<p>Get in touch! Send me a quick e-mail and I'll be sure to get back to you!</p>
-							</div>
-						</div>
-						<!-- /col-lg-6 -->	
-						<div class="col-lg-6">
-							<form method="post" id="main-contact-form" action='https://forms.un-static.com/forms/4f6dc09e5b33f56f9e6498bb0cd9c5677ef86d2d'>
-								<div class="margin-b24"><input type="text" id="name" name="name" class="comm-field" placeholder="Name" /></div>
-								<div class="margin-b24"><input type="text" name="email" class="comm-field" placeholder="Email" /> </div>
-								<div class="margin-b24"><textarea name="message" id="msg-contact" rows="5" placeholder="Message"></textarea></div>
-								<div class="g-recaptcha" style="margin-bottom: 20px;" data-theme="light" data-sitekey="6LdNvjseAAAAAIFHoEWOuf5y0af27lM1cwDc4yLu"></div>
-								<p><input type="submit" onclick="submit" value="Send" id="submit"/></p>
-							</form>
-							<!-- contact-form-holder-->
-							<div id="output-contact"></div>
-						</div>
-						<!-- /col-lg-6 -->		
+						<div class="col-lg-12">
+							<div class="hb-p-6268936a5a1896000882369b-1" style="margin-bottom: -7px;"></div>
+							<img height="1" width="1" style="display:none" src="https://www.honeybook.com/p.png?pid=6268936a5a1896000882369b">
+						</div>		
 					</div>
-					<!-- /row -->
-				</div>
-				<!-- /container -->
-			</section>
-			<!-- /SECTION 1-->
-			<!-- SECTION 2-->
-			<section>
-				<div class="gmaps">
-					<iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJrw7QBK9YXIYRvBagEDvhVgg&key=AIzaSyCkL-2qHn6hGhzLrRjrw-Cjb1GODFnG8XU"></iframe>
 				</div>
 			</section>
-			<!-- /SECTION 2-->
 		</div>
-		<!-- FOOTER -->
 		<footer id="footer"></footer>
-		<!-- FOOTER -->
 		<div class="scrollup">
 			<a class="scrolltop" href="#">
 			<i class="fa fa-chevron-up"></i>
@@ -88,18 +58,12 @@
 		<script src='js/simple-lightbox.js'></script>
 		<!-- MAIN JS -->
 		<script src='js/init.js'></script>
-		<!-- CONTAT FORM JS -->
-		<script src='js/jquery.form.min.js'></script>
-		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 		<script>
-			jQuery("#main-contact-form").submit(function(e){
-				if (!b) {
-					e.preventDefault();
-					localStorage["name"] = jQuery("#name").val();
-				} else {
-					jQuery(this).submit(false);
-				}
-			});
+			(function(h,b,s,n,i,p,e,t) {
+				h._HB_ = h._HB_ || {};h._HB_.pid = i;;;;
+				t=b.createElement(s);t.type="text/javascript";t.async=!0;t.src=n;
+				e=b.getElementsByTagName(s)[0];e.parentNode.insertBefore(t,e);
+			})(window,document,"script","https://widget.honeybook.com/assets_users_production/websiteplacements/placement-controller.min.js","6268936a5a1896000882369b");
 		</script>
 	</body>
 </html>

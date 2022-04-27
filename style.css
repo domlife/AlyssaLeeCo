@@ -15,8 +15,8 @@
 
 :root {
 	--body-font: gill-sans-nova;
-	--body-color: #858585;
-	--body-background: #f9f9f9;
+	--body-color: #0c0c0c;
+	--body-background: #aeaba2;
 	--body-font-size: 16px;
 	--body-line-height: 1.7;
 	--body-letter-spacing: .1em;
@@ -1196,7 +1196,7 @@ a.social-skype:hover {
 	right: 0;
 	left: 0;
 	z-index: 1030;
-	background: #FAF9F6;
+	background: rgb(229, 225, 214);
 	margin-top: 0;
 	-webkit-backface-visibility: hidden;
 	-webkit-transition: all .3s cubic-bezier(.25, 1, .35, 1) 0s;
@@ -1262,9 +1262,9 @@ a.social-skype:hover {
 * 
 */
 
-.section-holder {
+/* .section-holder {
 	margin-bottom: 108px;
-}
+} */
 
 
 /* SLIDER */
